@@ -1,0 +1,31 @@
+# Codex Skills 配置文件示例
+# 每行一个 skill 路径，支持 # 注释
+# 使用方式: ./setup-codex-skills.sh --config .codex-skills-config
+
+# ============================================
+# 我的自定义 skills
+# ============================================
+myskills/research-paper-writer
+
+# ============================================
+# Anthropic 官方 skills
+# ============================================
+# 文档协作
+anthropics-skills-guide/skills/doc-coauthoring
+
+# PDF 处理
+anthropics-skills-guide/skills/pdf
+
+# Excel 处理
+# anthropics-skills-guide/skills/xlsx
+
+# 内部沟通
+# anthropics-skills-guide/skills/internal-comms
+
+# ============================================
+# 参考 skills (从 refskills 目录)
+# ============================================
+# 如果需要加载 refskills 中的 skills，取消下面的注释
+# 注意：refskills 目录结构复杂，需要找到具体的 SKILL.md 路径
+# 使用 ./setup-codex-skills.sh --list 查看所有可用路径
+
