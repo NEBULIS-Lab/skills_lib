@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/skills-413-blue) ![](https://img.shields.io/badge/status-active-success) ![](https://img.shields.io/badge/category-multiple-orange) <a href="#"><img src="https://img.shields.io/badge/Lab-Website-6366F1.svg" alt="Lab"></a> <a href="https://github.com/NEBULIS-Lab/skills_lib"><img src="https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github" alt="GitHub"></a>
+![](https://img.shields.io/badge/skills-413-blue) ![](https://img.shields.io/badge/status-active-success) ![](https://img.shields.io/badge/category-multiple-orange) <a href="https://nebulis-lab.com/"><img src="https://img.shields.io/badge/NEBULIS%20Lab-Website-6366F1.svg" alt="NEBULIS Lab"></a> <a href="https://github.com/NEBULIS-Lab/skills_lib"><img src="https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github" alt="GitHub"></a>
 
 This repository contains 413 skills organized by category. Click on any skill name to view its details.
 
