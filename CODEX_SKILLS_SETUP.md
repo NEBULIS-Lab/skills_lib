@@ -4,7 +4,7 @@
 
 根据 [OpenAI Codex Skills 文档](openai-skills-guide/overview.md)，Codex 会从以下位置按优先级加载 skills：
 
-1. **`$CWD/.codex/skills`** - 当前工作目录（最高优先级）⭐
+1. **`$CWD/.codex/skills`** - 当前工作目录（最高优先级）
 2. `$CWD/../.codex/skills` - 上一级目录
 3. `$REPO_ROOT/.codex/skills` - Git 仓库根目录
 4. `~/.codex/skills` - 用户级别
@@ -171,6 +171,8 @@ EOF
 2. **名称冲突**：如果多个位置有同名的 skill，Codex 会使用优先级最高的（即 `.codex/skills/` 中的）
 3. **符号链接**：脚本使用符号链接，所以原始文件不会被复制，修改原始文件会立即生效
 4. **路径格式**：可以使用相对路径（相对于脚本所在目录）或绝对路径
+5. **跨平台兼容**：脚本兼容 macOS 和 Linux 系统，自动处理路径差异
+6. **配置文件路径**：配置文件路径可以是相对路径（相对于脚本目录）或绝对路径
 
 ## 当前目录中的 Skills 位置
 

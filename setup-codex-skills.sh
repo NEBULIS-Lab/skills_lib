@@ -85,7 +85,7 @@ find_all_skills() {
 
 # 列出所有可用的 skills
 list_skills() {
-    echo "📋 可用的 skills:"
+    echo "可用的 skills:"
     echo ""
     
     local skills=()
@@ -114,12 +114,53 @@ list_skills() {
         echo ""
     done
     
-    echo "💡 使用方式:"
+    echo "使用方式:"
     echo "  $0 <skill路径1> <skill路径2> ..."
     echo ""
     echo "示例:"
     echo "  $0 myskills/research-paper-writer"
     echo "  $0 myskills/research-paper-writer anthropics-skills-guide/skills/doc-coauthoring"
+}
+
+# 计算相对路径（兼容 macOS 和 Linux）
+relative_path() {
+    local target="$1"
+    local base="$2"
+    
+    # 转换为绝对路径
+    target=$(cd "$target" 2>/dev/null && pwd) || return 1
+    base=$(cd "$base" 2>/dev/null && pwd) || return 1
+    
+    # 如果路径相同，返回 "."
+    if [ "$target" = "$base" ]; then
+        echo "."
+        return 0
+    fi
+    
+    # 找到公共前缀
+    local common_part="$base"
+    local result=""
+    
+    while [ "${target#$common_part}" = "$target" ]; do
+        common_part=$(dirname "$common_part")
+        if [ -z "$result" ]; then
+            result=".."
+        else
+            result="../$result"
+        fi
+    done
+    
+    # 计算相对路径
+    local forward_part="${target#$common_part/}"
+    if [ -n "$forward_part" ]; then
+        if [ -n "$result" ]; then
+            result="$result/$forward_part"
+        else
+            result="$forward_part"
+        fi
+    fi
+    
+    echo "$result"
 }
 
 # 链接 skill
@@ -128,18 +169,24 @@ link_skill() {
     
     # 检查路径是否存在
     if [ ! -d "$skill_path" ]; then
-        # 尝试相对路径
+        # 尝试相对路径（相对于脚本目录）
         if [ -d "${SCRIPT_DIR}/${skill_path}" ]; then
             skill_path="${SCRIPT_DIR}/${skill_path}"
         else
-            echo "❌ 错误: 找不到 skill 路径: $1"
+            echo "[错误] 找不到 skill 路径: $1"
             return 1
         fi
     fi
     
+    # 转换为绝对路径
+    skill_path=$(cd "$skill_path" 2>/dev/null && pwd) || {
+        echo "[错误] 无法访问 skill 路径: $1"
+        return 1
+    }
+    
     # 检查是否有 SKILL.md
     if [ ! -f "${skill_path}/SKILL.md" ]; then
-        echo "❌ 错误: ${skill_path} 不是有效的 skill（缺少 SKILL.md）"
+        echo "[错误] ${skill_path} 不是有效的 skill（缺少 SKILL.md）"
         return 1
     fi
     
@@ -148,14 +195,20 @@ link_skill() {
     
     # 检查是否已存在
     if [ -e "${target}" ]; then
-        echo "⏭️  跳过 ${skill_name} (已存在)"
+        echo "[跳过] ${skill_name} (已存在)"
         return 0
     fi
     
-    # 创建符号链接
-    local rel_path=$(realpath --relative-to="${CODEX_SKILLS_DIR}" "${skill_path}" 2>/dev/null || echo "${skill_path}")
-    ln -s "${rel_path}" "${target}"
-    echo "✅ 已链接: ${skill_name}"
+    # 创建符号链接（使用相对路径）
+    local rel_path=$(relative_path "$skill_path" "$CODEX_SKILLS_DIR")
+    if [ $? -eq 0 ] && [ -n "$rel_path" ]; then
+        ln -s "$rel_path" "$target"
+        echo "[OK] 已链接: ${skill_name}"
+    else
+        # 回退到绝对路径
+        ln -s "$skill_path" "$target"
+        echo "[OK] 已链接: ${skill_name} (使用绝对路径)"
+    fi
     return 0
 }
 
@@ -165,12 +218,12 @@ remove_skill() {
     local target="${CODEX_SKILLS_DIR}/${skill_name}"
     
     if [ ! -e "${target}" ]; then
-        echo "❌ 错误: skill '${skill_name}' 不存在"
+        echo "[错误] skill '${skill_name}' 不存在"
         return 1
     fi
     
     rm "${target}"
-    echo "✅ 已移除: ${skill_name}"
+    echo "[OK] 已移除: ${skill_name}"
     return 0
 }
 
@@ -182,11 +235,11 @@ interactive_select() {
     done < <(find_all_skills)
     
     if [ ${#skills[@]} -eq 0 ]; then
-        echo "❌ 未找到任何 skills"
+        echo "[错误] 未找到任何 skills"
         return 1
     fi
     
-    echo "📋 请选择要加载的 skills (输入数字，多个用空格分隔，如: 1 3 5):"
+    echo "请选择要加载的 skills (输入数字，多个用空格分隔，如: 1 3 5):"
     echo ""
     
     local i=1
@@ -209,7 +262,7 @@ interactive_select() {
     done
     
     if [ ${#selected_indices[@]} -eq 0 ]; then
-        echo "❌ 未选择任何 skill"
+        echo "[错误] 未选择任何 skill"
         return 1
     fi
     
@@ -225,15 +278,20 @@ interactive_select() {
     done
     
     echo ""
-    echo "✨ 完成！已链接 ${linked_count} 个 skills"
+    echo "[完成] 已链接 ${linked_count} 个 skills"
 }
 
 # 从配置文件加载
 load_from_config() {
     local config_file="$1"
     
+    # 如果配置文件是相对路径，相对于脚本目录
+    if [ ! -f "$config_file" ] && [ -f "${SCRIPT_DIR}/${config_file}" ]; then
+        config_file="${SCRIPT_DIR}/${config_file}"
+    fi
+    
     if [ ! -f "$config_file" ]; then
-        echo "❌ 错误: 配置文件不存在: $config_file"
+        echo "[错误] 配置文件不存在: $1"
         return 1
     fi
     
@@ -241,20 +299,28 @@ load_from_config() {
     mkdir -p "${CODEX_SKILLS_DIR}"
     
     local linked_count=0
+    local line_num=0
     while IFS= read -r line || [ -n "$line" ]; do
+        ((line_num++))
+        
         # 跳过空行和注释
         [[ -z "$line" || "$line" =~ ^[[:space:]]*# ]] && continue
         
         # 去除首尾空格
         line=$(echo "$line" | xargs)
         
+        # 跳过空行（去除空格后）
+        [ -z "$line" ] && continue
+        
         if link_skill "$line"; then
             ((linked_count++))
+        else
+            echo "  警告: 第 ${line_num} 行加载失败: $line"
         fi
     done < "$config_file"
     
     echo ""
-    echo "✨ 完成！已链接 ${linked_count} 个 skills"
+    echo "[完成] 已链接 ${linked_count} 个 skills"
 }
 
 # 主逻辑
@@ -283,6 +349,10 @@ main() {
                 exit 0
                 ;;
             -c|--config)
+                if [ -z "$2" ]; then
+                    echo "[错误] --config 选项需要指定配置文件路径"
+                    exit 1
+                fi
                 config_file="$2"
                 shift
                 ;;
@@ -317,11 +387,11 @@ main() {
     
     # 如果没有指定任何 skill，显示帮助
     if [ ${#skills_to_link[@]} -eq 0 ]; then
-        echo "❌ 错误: 请指定要加载的 skills"
+        echo "[错误] 请指定要加载的 skills"
         echo ""
         show_usage
         echo ""
-        echo "💡 提示: 使用 '$0 --list' 查看所有可用的 skills"
+        echo "提示: 使用 '$0 --list' 查看所有可用的 skills"
         exit 1
     fi
     
@@ -334,9 +404,9 @@ main() {
     done
     
     echo ""
-    echo "✨ 完成！已链接 ${linked_count} 个 skills"
+    echo "[完成] 已链接 ${linked_count} 个 skills"
     echo ""
-    echo "📝 下一步："
+    echo "下一步："
     echo "   1. 重启 Codex 以加载新的 skills"
     echo "   2. 在 Codex 中使用 \`/skills\` 命令查看可用的 skills"
     echo "   3. 使用 \`\$skill-name\` 来显式调用某个 skill"

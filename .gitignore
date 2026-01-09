@@ -40,3 +40,4 @@ dist/
 build/
 *.egg-info/
 
+content.md
