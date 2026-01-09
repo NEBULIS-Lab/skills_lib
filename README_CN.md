@@ -2,9 +2,9 @@
 
 本仓库包含 413 个 skills，按类别组织。点击任意 skill 名称查看详细信息。
 
-## 学术写作与研究
+## 学术写作与研究（Academic Writing & Research）
 
-### 学术论文写作
+### 学术论文写作（Academic Paper Writing）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [academic-writing](refskills/claude-skills-journalism/academic-writing/SKILL.md) | 学术写作、研究方法和学术交流工作流。在撰写论文、文献综述、研究提案时使用 | `refskills/claude-skills-journalism/academic-writing/SKILL.md` |
@@ -18,7 +18,7 @@
 | [scientific-writing](refskills/claude-scientific-skills/scientific-skills/scientific-writing/SKILL.md) | 深度研究和写作工具的核心技能。以完整段落编写科学手稿（不使用项目符号）。用于学术写作等 | `refskills/claude-scientific-skills/scientific-skills/scientific-writing/SKILL.md` |
 | [venue-templates](refskills/claude-scientific-skills/scientific-skills/venue-templates/SKILL.md) | 访问主要科学出版物的综合 LaTeX 模板、格式要求和投稿指南 | `refskills/claude-scientific-skills/scientific-skills/venue-templates/SKILL.md` |
 
-### 文献相关
+### 文献相关（Literature & References）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [openalex-database](refskills/claude-scientific-skills/scientific-skills/openalex-database/SKILL.md) | 使用 OpenAlex 数据库查询并分析学术文献；在检索学术论文并进行文献分析时使用 | `refskills/claude-scientific-skills/scientific-skills/openalex-database/SKILL.md` |
@@ -31,7 +31,7 @@
 | [article-extractor](refskills/tapestry-skills-for-claude-code/article-extractor/SKILL.md) | 从URL（博客文章、文章、教程）提取干净的文章内容并保存为可读文本。在用户想要下载文章内容时使用 | `refskills/tapestry-skills-for-claude-code/article-extractor/SKILL.md` |
 | [web-browser](refskills/agent-stuff/skills/web-browser/SKILL.md) | 允许通过执行点击按钮、填写表单和导航链接等操作与网页交互。它通过使用 Chrome DevTools Protocol (CDP) 远程控制 Google Chrome 或 Chromium 浏览器来工作。当 Claude 需要浏览网页时，可以使用此技能 | `refskills/agent-stuff/skills/web-browser/SKILL.md` |
 
-### 研究与想法讨论
+### 研究与想法讨论（Research & Idea Discussion）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [exploratory-data-analysis](refskills/claude-scientific-skills/scientific-skills/exploratory-data-analysis/SKILL.md) | 对 200+ 文件格式的科学数据文件执行综合探索性数据分析。此技能应在分析任何科学数据文件时使用 | `refskills/claude-scientific-skills/scientific-skills/exploratory-data-analysis/SKILL.md` |
@@ -41,13 +41,13 @@
 | [scientific-slides](refskills/claude-scientific-skills/scientific-skills/scientific-slides/SKILL.md) | 为研究演讲构建幻灯片和演示文稿。用于制作 PowerPoint 幻灯片、会议演示、研讨会等 | `refskills/claude-scientific-skills/scientific-skills/scientific-slides/SKILL.md` |
 | [statistical-analysis](refskills/claude-scientific-skills/scientific-skills/statistical-analysis/SKILL.md) | 统计分析工具包：假设检验（t 检验、ANOVA、卡方）、回归、相关、贝叶斯统计等 | `refskills/claude-scientific-skills/scientific-skills/statistical-analysis/SKILL.md` |
 
-### Gemini 图像生成
+### Gemini 图像生成（Gemini Image Generation）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [generate-image](refskills/claude-scientific-skills/scientific-skills/generate-image/SKILL.md) | 使用 AI 模型（FLUX、Gemini）生成或编辑图像。用于通用图像生成，包括照片、插图、艺术等 | `refskills/claude-scientific-skills/scientific-skills/generate-image/SKILL.md` |
 | [scientific-schematics](refskills/claude-scientific-skills/scientific-skills/scientific-schematics/SKILL.md) | 使用 Nano Banana Pro AI 创建出版级科学图表，具有智能迭代优化。使用 Gemini 3 Pro 进行高质量生成 | `refskills/claude-scientific-skills/scientific-skills/scientific-schematics/SKILL.md` |
 
-### Git 与终端管理工具
+### Git 与终端管理工具（Git & Terminal Management Tools）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [tmux](refskills/agent-stuff/skills/tmux/SKILL.md) | 通过发送按键和抓取窗格输出来远程控制 tmux 会话，用于交互式 CLI（python、gdb 等） | `refskills/agent-stuff/skills/tmux/SKILL.md` |
@@ -57,7 +57,7 @@
 | [github](refskills/agent-stuff/skills/github/SKILL.md) | 使用 `gh` CLI 与 GitHub 交互。使用 `gh issue`、`gh pr`、`gh run` 和 `gh api` 处理 issues、PRs、CI 运行和高级查询 | `refskills/agent-stuff/skills/github/SKILL.md` |
 | [changelog-generator](refskills/claude-code-templates/cli-tool/components/skills/development/changelog-generator/SKILL.md) | 通过分析提交历史、分类变更和跟踪版本，自动从git提交创建面向用户的变更日志 | `refskills/claude-code-templates/cli-tool/components/skills/development/changelog-generator/SKILL.md` |
 
-## 商业与分析
+## 商业与分析（Business & Analytics）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -77,7 +77,7 @@
 | [product-strategist](refskills/claude-code-templates/cli-tool/components/skills/business-marketing/product-strategist/SKILL.md) | 产品负责人的战略产品领导力工具包，包括OKR级联生成、市场分析、愿景设定等 | `refskills/claude-code-templates/cli-tool/components/skills/business-marketing/product-strategist/SKILL.md` |
 | [SEO Optimizer](refskills/claude-code-templates/cli-tool/components/skills/business-marketing/seo-optimizer/SKILL.md) | 搜索引擎优化专家，专注于内容策略、技术SEO、关键词研究和排名提升 | `refskills/claude-code-templates/cli-tool/components/skills/business-marketing/seo-optimizer/SKILL.md` |
 
-## 设计与创意
+## 设计与创意（Design & Creative）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -93,7 +93,7 @@
 | [ui-design-system](refskills/claude-code-templates/cli-tool/components/skills/creative-design/ui-design-system/SKILL.md) | 高级UI设计师的UI设计系统工具包，包括设计令牌生成、组件文档、响应式模式等 | `refskills/claude-code-templates/cli-tool/components/skills/creative-design/ui-design-system/SKILL.md` |
 | [ux-researcher-designer](refskills/claude-code-templates/cli-tool/components/skills/creative-design/ux-researcher-designer/SKILL.md) | 高级UX设计师/研究员的UX研究和设计工具包，包括数据驱动的人物角色生成、旅程映射等 | `refskills/claude-code-templates/cli-tool/components/skills/creative-design/ux-researcher-designer/SKILL.md` |
 
-## 开发工具
+## 开发工具（Development Tools）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -142,7 +142,7 @@
 | [webapp-testing](anthropics-skills-guide/skills/webapp-testing/SKILL.md) | 使用Playwright与本地Web应用交互和测试的工具包。支持验证前端功能、调试问题等 | `anthropics-skills-guide/skills/webapp-testing/SKILL.md` |
 | [workflow-orchestration-patterns](refskills/Plugins-agents/plugins/backend-development/skills/workflow-orchestration-patterns/SKILL.md) | 使用Temporal为分布式系统设计持久化工作流。涵盖工作流与活动分离、saga模式、状态管理等 | `refskills/Plugins-agents/plugins/backend-development/skills/workflow-orchestration-patterns/SKILL.md` |
 
-## 文档处理
+## 文档处理（Document Processing）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -152,7 +152,7 @@
 | [pptx](refskills/claude-scientific-skills/scientific-skills/document-skills/pptx/SKILL.md) | 演示文稿创建、编辑和分析。当Claude需要处理演示文稿（.pptx文件）时使用：创建新演示文稿、修改内容、处理布局等 | `refskills/claude-scientific-skills/scientific-skills/document-skills/pptx/SKILL.md` |
 | [xlsx](refskills/claude-scientific-skills/scientific-skills/document-skills/xlsx/SKILL.md) | 综合电子表格创建、编辑和分析，支持公式、格式、数据分析和可视化。处理Excel文件时使用 | `refskills/claude-scientific-skills/scientific-skills/document-skills/xlsx/SKILL.md` |
 
-## 企业合规
+## 企业合规（Enterprise & Compliance）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -180,7 +180,7 @@
 | [security-compliance](refskills/claude-code-templates/cli-tool/components/skills/development/security-compliance/SKILL.md) | 指导安全专业人员实施深度防御安全架构，实现与行业标准和法规的合规 | `refskills/claude-code-templates/cli-tool/components/skills/development/security-compliance/SKILL.md` |
 | [wcag-audit-patterns](refskills/Plugins-agents/plugins/accessibility-compliance/skills/wcag-audit-patterns/SKILL.md) | 进行WCAG 2.2无障碍审计，包括自动化测试、手动验证和修复指导。在审计网站可访问性时使用 | `refskills/Plugins-agents/plugins/accessibility-compliance/skills/wcag-audit-patterns/SKILL.md` |
 
-## GitHub 集成
+## GitHub 集成（GitHub Integration）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -188,7 +188,7 @@
 | [gh-fix-ci](openai-skills-guide/openai-skills/skills/.curated/gh-fix-ci/SKILL.md) | 使用gh检查GitHub PR检查，拉取失败的GitHub Actions日志，总结失败上下文，然后创建修复计划并在用户批准后实施 | `openai-skills-guide/openai-skills/skills/.curated/gh-fix-ci/SKILL.md` |
 | [github-actions-templates](refskills/Plugins-agents/plugins/cicd-automation/skills/github-actions-templates/SKILL.md) | 创建生产就绪的GitHub Actions工作流，用于自动化测试、构建和部署应用。在设置CI/CD管道时使用 | `refskills/Plugins-agents/plugins/cicd-automation/skills/github-actions-templates/SKILL.md` |
 
-## 基础设施与运维
+## 基础设施与运维（Infrastructure & DevOps）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -209,7 +209,7 @@
 | [service-mesh-observability](refskills/Plugins-agents/plugins/cloud-infrastructure/skills/service-mesh-observability/SKILL.md) | 为服务网格实现综合可观测性，包括分布式跟踪、指标和可视化。在设置监控时使用 | `refskills/Plugins-agents/plugins/cloud-infrastructure/skills/service-mesh-observability/SKILL.md` |
 | [terraform-module-library](refskills/Plugins-agents/plugins/cloud-infrastructure/skills/terraform-module-library/SKILL.md) | 遵循基础设施即代码最佳实践，为AWS、Azure和GCP基础设施构建可重用的Terraform模块。在创建Terraform模块时使用 | `refskills/Plugins-agents/plugins/cloud-infrastructure/skills/terraform-module-library/SKILL.md` |
 
-## 新闻与写作
+## 新闻与写作（Journalism & Writing）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -222,7 +222,7 @@
 | [web-scraping](refskills/claude-skills-journalism/web-scraping/SKILL.md) | 网络爬虫，具有反机器人绕过、内容提取和毒丸检测。在从网站提取内容时使用 | `refskills/claude-skills-journalism/web-scraping/SKILL.md` |
 | [zero-build-frontend](refskills/claude-skills-journalism/zero-build-frontend/SKILL.md) | 零构建前端开发，使用CDN加载的React、Tailwind CSS和原生JavaScript。在构建静态Web应用时使用 | `refskills/claude-skills-journalism/zero-build-frontend/SKILL.md` |
 
-## Notion 集成
+## Notion 集成（Notion Integration）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -233,7 +233,7 @@
 | [notion-spec-to-implementation](openai-skills-guide/openai-skills/skills/.curated/notion-spec-to-implementation/SKILL.md) | 将Notion规范转化为实施计划、任务和进度跟踪；在实施PRD/功能规范并从中创建Notion计划和任务时使用 | `openai-skills-guide/openai-skills/skills/.curated/notion-spec-to-implementation/SKILL.md` |
 | [notion-spec-to-implementation](refskills/claude-code-templates/cli-tool/components/skills/productivity/notion-spec-to-implementation/SKILL.md) | 将Notion规范转化为实施计划、任务和进度跟踪；在实施PRD/功能规范并从中创建Notion计划和任务时使用 | `refskills/claude-code-templates/cli-tool/components/skills/productivity/notion-spec-to-implementation/SKILL.md` |
 
-## 其他
+## 其他（Other）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -347,7 +347,7 @@
 | [pi-share](refskills/agent-stuff/skills/pi-share/SKILL.md) | 从 shittycodingagent.ai (pi-share) URL 加载和解析会话转录。获取 gists、解码嵌入的会话数据并提取对话历史 | `refskills/agent-stuff/skills/pi-share/SKILL.md` |
 | [sentry](refskills/agent-stuff/skills/sentry/SKILL.md) | 获取和分析 Sentry issues、events、transactions 和 logs。帮助代理调试错误、查找根本原因并了解特定时间发生的情况 | `refskills/agent-stuff/skills/sentry/SKILL.md` |
 
-## 生产力与通信
+## 生产力与通信（Productivity & Communication）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -361,15 +361,15 @@
 | [raffle-winner-picker](refskills/claude-code-templates/cli-tool/components/skills/productivity/raffle-winner-picker/SKILL.md) | 从列表/表格/Google Sheets 中随机抽取获奖者，用于赠品、抽奖与比赛，确保公平无偏 | `refskills/claude-code-templates/cli-tool/components/skills/productivity/raffle-winner-picker/SKILL.md` |
 | [Writing Hookify Rules](refskills/claude-code-templates/cli-tool/components/skills/productivity/writing-rules/SKILL.md) | 当用户要求“创建 Hookify 规则”“编写 hook 规则”“配置 Hookify”“添加规则”等时使用此技能 | `refskills/claude-code-templates/cli-tool/components/skills/productivity/writing-rules/SKILL.md` |
 
-## 科学研究
+## 科学研究（Scientific & Research）
 
-### Academic Literature & Databases
+### 学术文献与数据库（Academic Literature & Databases）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [biorxiv-database](refskills/claude-scientific-skills/scientific-skills/biorxiv-database/SKILL.md) | 高效检索 bioRxiv 预印本服务器；在按关键词等搜索生命科学预印本时使用 | `refskills/claude-scientific-skills/scientific-skills/biorxiv-database/SKILL.md` |
 | [uspto-database](refskills/claude-scientific-skills/scientific-skills/uspto-database/SKILL.md) | 访问 USPTO API：专利/商标检索、审查历史（PEDS）、转让信息、引用、审查意见等 | `refskills/claude-scientific-skills/scientific-skills/uspto-database/SKILL.md` |
 
-### Bioinformatics & Genomics
+### 生物信息学与基因组学（Bioinformatics & Genomics）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [arboreto](refskills/claude-scientific-skills/scientific-skills/arboreto/SKILL.md) | 使用可扩展算法（GRNBoost2、GENIE3）从基因表达数据推断基因调控网络（GRN） | `refskills/claude-scientific-skills/scientific-skills/arboreto/SKILL.md` |
@@ -392,7 +392,7 @@
 | [pysam](refskills/claude-scientific-skills/scientific-skills/pysam/SKILL.md) | 基因组文件工具包：读写 SAM/BAM/CRAM 比对、VCF/BCF 变异、FASTA/FASTQ 序列、提取区域、计算覆盖度等 | `refskills/claude-scientific-skills/scientific-skills/pysam/SKILL.md` |
 | [scikit-bio](refskills/claude-scientific-skills/scientific-skills/scikit-bio/SKILL.md) | 生物数据工具包：序列分析、比对、系统发育树、多样性指标（alpha/beta、UniFrac）等 | `refskills/claude-scientific-skills/scientific-skills/scikit-bio/SKILL.md` |
 
-### Protein Science
+### 蛋白质科学（Protein Science）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [adaptyv](refskills/claude-scientific-skills/scientific-skills/adaptyv/SKILL.md) | 用于自动化蛋白测试与验证的云实验室平台；在进行蛋白设计并需要实验验证支持时使用 | `refskills/claude-scientific-skills/scientific-skills/adaptyv/SKILL.md` |
@@ -404,7 +404,7 @@
 | [string-database](refskills/claude-scientific-skills/scientific-skills/string-database/SKILL.md) | 查询 STRING API 的蛋白-蛋白相互作用（5900 万蛋白、200 亿交互）：网络分析与 GO/KEGG 富集等 | `refskills/claude-scientific-skills/scientific-skills/string-database/SKILL.md` |
 | [uniprot-database](refskills/claude-scientific-skills/scientific-skills/uniprot-database/SKILL.md) | 直接 REST API 访问 UniProt：蛋白质搜索、FASTA 检索、ID 映射、Swiss-Prot/TrEMBL。用于 Python 工作流等 | `refskills/claude-scientific-skills/scientific-skills/uniprot-database/SKILL.md` |
 
-### Drug Discovery & Cheminformatics
+### 药物发现与化学信息学（Drug Discovery & Cheminformatics）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [chembl-database](refskills/claude-scientific-skills/scientific-skills/chembl-database/SKILL.md) | 查询 ChEMBL 的生物活性分子与药物发现数据：按结构/性质搜索化合物并获取生物活性信息等 | `refskills/claude-scientific-skills/scientific-skills/chembl-database/SKILL.md` |
@@ -423,7 +423,7 @@
 | [torchdrug](refskills/claude-scientific-skills/scientific-skills/torchdrug/SKILL.md) | 基于图的药物发现工具包：分子性质预测（ADMET）、蛋白质建模、知识图谱推理等 | `refskills/claude-scientific-skills/scientific-skills/torchdrug/SKILL.md` |
 | [zinc-database](refskills/claude-scientific-skills/scientific-skills/zinc-database/SKILL.md) | 访问 ZINC（2.3 亿+可购买化合物）：按 ZINC ID/SMILES 搜索、相似性检索与获取 3D 结构用于对接等 | `refskills/claude-scientific-skills/scientific-skills/zinc-database/SKILL.md` |
 
-### Single-cell & Omics Analysis
+### 单细胞与组学分析（Single-cell & Omics Analysis）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [anndata](refskills/claude-scientific-skills/scientific-skills/anndata/SKILL.md) | 当在 Python 中处理带注释的数据矩阵时使用，尤其适用于单细胞基因组学分析 | `refskills/claude-scientific-skills/scientific-skills/anndata/SKILL.md` |
@@ -432,7 +432,7 @@
 | [scanpy](refskills/claude-scientific-skills/scientific-skills/scanpy/SKILL.md) | 单细胞 RNA-seq 分析：加载 .h5ad/10X 数据、QC、标准化、PCA/UMAP/t-SNE、Leiden 聚类、标记基因等 | `refskills/claude-scientific-skills/scientific-skills/scanpy/SKILL.md` |
 | [scvi-tools](refskills/claude-scientific-skills/scientific-skills/scvi-tools/SKILL.md) | 当使用 scvi-tools 进行单细胞组学数据分析时使用（含 scRNA-seq、scATAC-seq、CITE-seq 等） | `refskills/claude-scientific-skills/scientific-skills/scvi-tools/SKILL.md` |
 
-### Medical & Clinical
+### 医学与临床（Medical & Clinical）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [clinical-decision-support](refskills/claude-scientific-skills/scientific-skills/clinical-decision-support/SKILL.md) | 生成专业临床决策支持（CDS）文档，适用于制药与临床研究场景（包含患者相关信息等） | `refskills/claude-scientific-skills/scientific-skills/clinical-decision-support/SKILL.md` |
@@ -449,7 +449,7 @@
 | [scikit-survival](refskills/claude-scientific-skills/scientific-skills/scikit-survival/SKILL.md) | 使用 scikit-survival 在 Python 中进行生存分析和事件时间建模的综合工具包。在处理生存数据时使用此技能 | `refskills/claude-scientific-skills/scientific-skills/scikit-survival/SKILL.md` |
 | [treatment-plans](refskills/claude-scientific-skills/scientific-skills/treatment-plans/SKILL.md) | 生成简洁（3-4 页）、聚焦的医疗治疗计划，LaTeX/PDF 格式，适用于所有临床专科。支持基因检测等 | `refskills/claude-scientific-skills/scientific-skills/treatment-plans/SKILL.md` |
 
-### Computational Biology & Systems Biology
+### 计算生物学与系统生物学（Computational Biology & Systems Biology）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [biomni](refskills/claude-scientific-skills/scientific-skills/biomni/SKILL.md) | 自主生物医药 AI 代理框架，可执行跨基因组学、药物发现、分子等的复杂研究任务 | `refskills/claude-scientific-skills/scientific-skills/biomni/SKILL.md` |
@@ -460,7 +460,7 @@
 | [lamindb](refskills/claude-scientific-skills/scientific-skills/lamindb/SKILL.md) | 当使用 LaminDB（让生物数据可查询、可追踪的开源数据框架）时使用 | `refskills/claude-scientific-skills/scientific-skills/lamindb/SKILL.md` |
 | [networkx](refskills/claude-scientific-skills/scientific-skills/networkx/SKILL.md) | Python 复杂网络/图的创建、分析与可视化工具包；当处理网络/图数据时使用 | `refskills/claude-scientific-skills/scientific-skills/networkx/SKILL.md` |
 
-### Laboratory Automation
+### 实验室自动化（Laboratory Automation）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [benchling-integration](refskills/claude-scientific-skills/scientific-skills/benchling-integration/SKILL.md) | Benchling 研发平台集成：通过 API 访问注册表（DNA/蛋白）、库存、ELN 条目与工作流并构建集成 | `refskills/claude-scientific-skills/scientific-skills/benchling-integration/SKILL.md` |
@@ -469,7 +469,7 @@
 | [protocolsio-integration](refskills/claude-scientific-skills/scientific-skills/protocolsio-integration/SKILL.md) | 集成 protocols.io API，用于管理科研实验流程（protocols）；当使用 protocols.io 时使用 | `refskills/claude-scientific-skills/scientific-skills/protocolsio-integration/SKILL.md` |
 | [pylabrobot](refskills/claude-scientific-skills/scientific-skills/pylabrobot/SKILL.md) | 用于控制液体处理器、读板器、泵、加热振荡器、培养箱、离心机等的实验室自动化工具包 | `refskills/claude-scientific-skills/scientific-skills/pylabrobot/SKILL.md` |
 
-### Machine Learning & AI
+### 机器学习与人工智能（Machine Learning & AI）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [aeon](refskills/claude-scientific-skills/scientific-skills/aeon/SKILL.md) | 用于时间序列机器学习任务（分类、回归、聚类、预测等）时使用 | `refskills/claude-scientific-skills/scientific-skills/aeon/SKILL.md` |
@@ -482,7 +482,7 @@
 | [transformers](refskills/claude-scientific-skills/scientific-skills/transformers/SKILL.md) | 当使用预训练 Transformer 模型进行自然语言处理、计算机视觉等任务时使用 | `refskills/claude-scientific-skills/scientific-skills/transformers/SKILL.md` |
 | [umap-learn](refskills/claude-scientific-skills/scientific-skills/umap-learn/SKILL.md) | UMAP 降维：快速非线性流形学习，用于 2D/3D 可视化、聚类预处理（HDBSCAN）等 | `refskills/claude-scientific-skills/scientific-skills/umap-learn/SKILL.md` |
 
-### Statistical Analysis & Modeling
+### 统计分析与建模（Statistical Analysis & Modeling）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [pymc-bayesian-modeling](refskills/claude-scientific-skills/scientific-skills/pymc/SKILL.md) | 使用 PyMC 进行贝叶斯建模：构建层次模型、MCMC（NUTS）、变分推断、LOO/WAIC 比较、后验分析等 | `refskills/claude-scientific-skills/scientific-skills/pymc/SKILL.md` |
@@ -490,7 +490,7 @@
 | [statsmodels](refskills/claude-scientific-skills/scientific-skills/statsmodels/SKILL.md) | 统计建模工具包：OLS、GLM、逻辑回归、ARIMA、时间序列、假设检验、诊断、AIC/BIC，用于严谨分析等 | `refskills/claude-scientific-skills/scientific-skills/statsmodels/SKILL.md` |
 | [sympy](refskills/claude-scientific-skills/scientific-skills/sympy/SKILL.md) | 当在 Python 中进行符号数学/符号计算时使用（如方程求解、微积分、化简等） | `refskills/claude-scientific-skills/scientific-skills/sympy/SKILL.md` |
 
-### Data Visualization
+### 数据可视化（Data Visualization）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [matplotlib](refskills/claude-scientific-skills/scientific-skills/matplotlib/SKILL.md) | 基础绘图库：创建折线图、散点图、柱状图、直方图、热图、3D 图、子图，导出 PNG/PDF/SVG 等 | `refskills/claude-scientific-skills/scientific-skills/matplotlib/SKILL.md` |
@@ -498,7 +498,7 @@
 | [scientific-visualization](refskills/claude-scientific-skills/scientific-skills/scientific-visualization/SKILL.md) | 使用 matplotlib/seaborn/plotly 创建出版级图表：多面板布局、误差棒、显著性标记、色盲友好配色等 | `refskills/claude-scientific-skills/scientific-skills/scientific-visualization/SKILL.md` |
 | [seaborn](refskills/claude-scientific-skills/scientific-skills/seaborn/SKILL.md) | 统计可视化：散点图、箱线图、小提琴图、热图、配对图、回归、相关矩阵、KDE、分面图等 | `refskills/claude-scientific-skills/scientific-skills/seaborn/SKILL.md` |
 
-### Quantum Computing
+### 量子计算（Quantum Computing）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [cirq](refskills/claude-scientific-skills/scientific-skills/cirq/SKILL.md) | 量子计算框架：用于构建、模拟、优化与执行量子电路；在进行量子算法开发时使用 | `refskills/claude-scientific-skills/scientific-skills/cirq/SKILL.md` |
@@ -506,17 +506,17 @@
 | [qiskit](refskills/claude-scientific-skills/scientific-skills/qiskit/SKILL.md) | 综合量子计算工具包，用于构建、优化和执行量子电路。在处理量子算法时使用 | `refskills/claude-scientific-skills/scientific-skills/qiskit/SKILL.md` |
 | [qutip](refskills/claude-scientific-skills/scientific-skills/qutip/SKILL.md) | 使用 QuTiP（Python 量子工具箱）进行量子力学模拟和分析。在处理量子系统时使用，包括开放系统等 | `refskills/claude-scientific-skills/scientific-skills/qutip/SKILL.md` |
 
-### Materials Science
+### 材料科学（Materials Science）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [pymatgen](refskills/claude-scientific-skills/scientific-skills/pymatgen/SKILL.md) | 材料科学工具包：晶体结构（CIF、POSCAR）、相图、能带结构、DOS、Materials Project 集成等 | `refskills/claude-scientific-skills/scientific-skills/pymatgen/SKILL.md` |
 
-### Astronomy
+### 天文学（Astronomy）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [astropy](refskills/claude-scientific-skills/scientific-skills/astropy/SKILL.md) | 天文学与天体物理学综合 Python 库；在处理天文数据（坐标/时间/单位/天体测量等）时使用 | `refskills/claude-scientific-skills/scientific-skills/astropy/SKILL.md` |
 
-### Computing & Simulation
+### 计算与模拟（Computing & Simulation）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [dask](refskills/claude-scientific-skills/scientific-skills/dask/SKILL.md) | 并行/分布式计算：将 pandas/NumPy 扩展到超内存规模，支持并行 DataFrames/Arrays、多文件处理等 | `refskills/claude-scientific-skills/scientific-skills/dask/SKILL.md` |
@@ -529,7 +529,7 @@
 | [vaex](refskills/claude-scientific-skills/scientific-skills/vaex/SKILL.md) | 用于处理和分析超过可用 RAM 的大型表格数据集（数十亿行）。Vaex 擅长内存高效处理等 | `refskills/claude-scientific-skills/scientific-skills/vaex/SKILL.md` |
 | [zarr-python](refskills/claude-scientific-skills/scientific-skills/zarr-python/SKILL.md) | 用于云存储的分块 N 维数组。压缩数组、并行 I/O、S3/GCS 集成、NumPy/Dask/Xarray 兼容等 | `refskills/claude-scientific-skills/scientific-skills/zarr-python/SKILL.md` |
 
-### Document Processing
+### 文档处理（Document Processing）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [docx](refskills/claude-scientific-skills/scientific-skills/document-skills/docx/SKILL.md) | 文档工具包（.docx）：创建/编辑文档、跟踪更改、评论、格式保留、文本提取等 | `refskills/claude-scientific-skills/scientific-skills/document-skills/docx/SKILL.md` |
@@ -539,7 +539,7 @@
 | [pptx-posters](refskills/claude-scientific-skills/scientific-skills/pptx-posters/SKILL.md) | 使用 HTML/CSS 创建研究海报，可导出为 PDF 或 PPTX。仅在用户明确请求时使用此技能 | `refskills/claude-scientific-skills/scientific-skills/pptx-posters/SKILL.md` |
 | [xlsx](refskills/claude-scientific-skills/scientific-skills/document-skills/xlsx/SKILL.md) | 电子表格工具包（.xlsx/.csv）：使用公式/格式创建/编辑、分析数据、可视化、重新计算公式等 | `refskills/claude-scientific-skills/scientific-skills/document-skills/xlsx/SKILL.md` |
 
-### Other Scientific Tools
+### 其他科学工具（Other Scientific Tools）
 | Skill Name | Description | Location |
 |------------|-------------|----------|
 | [database-migration](refskills/Plugins-agents/plugins/framework-migration/skills/database-migration/SKILL.md) | 在不同 ORM/平台间执行数据库迁移，支持零停机策略、数据转换与回滚流程 | `refskills/Plugins-agents/plugins/framework-migration/skills/database-migration/SKILL.md` |
@@ -553,7 +553,7 @@
 | [omero-integration](refskills/claude-scientific-skills/scientific-skills/omero-integration/SKILL.md) | 显微成像数据管理平台：用 Python 访问图像、获取数据集、像素分析并管理 ROI/标注等 | `refskills/claude-scientific-skills/scientific-skills/omero-integration/SKILL.md` |
 | [pyopenms](refskills/claude-scientific-skills/scientific-skills/pyopenms/SKILL.md) | 用于质谱数据分析的 OpenMS Python 接口。用于 LC-MS/MS 蛋白质组学和代谢组学工作流，包括特征检测等 | `refskills/claude-scientific-skills/scientific-skills/pyopenms/SKILL.md` |
 
-## 安全合规
+## 安全合规（Security & Compliance）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
@@ -566,7 +566,7 @@
 | [stride-analysis-patterns](refskills/Plugins-agents/plugins/security-scanning/skills/stride-analysis-patterns/SKILL.md) | 应用 STRIDE 方法论系统性地识别威胁。在分析系统安全性、进行威胁建模或评估安全风险时使用 | `refskills/Plugins-agents/plugins/security-scanning/skills/stride-analysis-patterns/SKILL.md` |
 | [threat-mitigation-mapping](refskills/Plugins-agents/plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md) | 将已识别的威胁映射到适当的安全控制和缓解措施。在确定安全投资优先级、创建安全路线图或设计防御策略时使用 | `refskills/Plugins-agents/plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md` |
 
-## Web 开发
+## Web 开发（Web Development）
 
 | Skill Name | Description | Location |
 |------------|-------------|----------|
